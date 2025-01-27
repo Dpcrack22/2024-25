@@ -1,0 +1,1 @@
+# poner variables para dados del bot y usuario son dos para cada uno y una para los puntos de los dos bot y usuario

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../EX1/.idea/EX1.iml" filepath="$PROJECT_DIR$/../EX1/.idea/EX1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Ficheros/.idea/Ficheros.iml" filepath="$PROJECT_DIR$/../Ficheros/.idea/Ficheros.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Funciones/.idea/Funciones.iml" filepath="$PROJECT_DIR$/../Funciones/.idea/Funciones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../M03_ExamenParcial1_DavidPerera/.idea/M03_ExamenParcial1_DavidPerera.iml" filepath="$PROJECT_DIR$/../M03_ExamenParcial1_DavidPerera/.idea/M03_ExamenParcial1_DavidPerera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MiPrimerProyecto.iml" filepath="$PROJECT_DIR$/.idea/MiPrimerProyecto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../MiSegundoProyecto/.idea/MiSegundoProyecto.iml" filepath="$PROJECT_DIR$/../MiSegundoProyecto/.idea/MiSegundoProyecto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PereraDavid_ExamenFinal1/.idea/PereraDavid_ExamenFinal1.iml" filepath="$PROJECT_DIR$/../PereraDavid_ExamenFinal1/.idea/PereraDavid_ExamenFinal1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PereraDavid_ExamenPrueba1ç/.idea/PereraDavid_ExamenPrueba1ç.iml" filepath="$PROJECT_DIR$/../PereraDavid_ExamenPrueba1ç/.idea/PereraDavid_ExamenPrueba1ç.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PereraDavid_PrimerParcial_SegundaParte/.idea/PereraDavid_PrimerParcial_SegundaParte.iml" filepath="$PROJECT_DIR$/../PereraDavid_PrimerParcial_SegundaParte/.idea/PereraDavid_PrimerParcial_SegundaParte.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PreparacionExamen2/.idea/PreparacionExamen2.iml" filepath="$PROJECT_DIR$/../PreparacionExamen2/.idea/PreparacionExamen2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mimodulo/.idea/mimodulo.iml" filepath="$PROJECT_DIR$/../mimodulo/.idea/mimodulo.iml" />
+    </modules>
+  </component>
+</project>
