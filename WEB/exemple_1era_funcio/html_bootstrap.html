@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+Capçalera: dissenyada amb "text-center" per centrar-la i col·locada dins d'una etiqueta <header>.
+Paràgraf: dissenyat amb "lead text-muted" per a una font més gran i un color gris subtil.
+Input: s'ha fet servir "form-control" una classe per formularis de Bootstrap. També inclou una etiqueta.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provar javascript</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* estils addicionals
+    Header:
+        Color de fons afegit blau.
+        S'ha canviat el color del text a blanc (color: blanc).
+        Padding afegit per a un millor espaiat.
+    Container:
+        S'ha aplicat un color de fons gris per al contrast.
+        S'ha afegit un radi de vora: 8px per a cantonades arrodonides.
+        Padding afegit: 20px per espaiar dins del contenidor.
+        S'ha afegit la classe d'ombra per a un subtil efecte d'ombra.
+        */
+        header {
+            background-color: #007bff; /* Bootstrap primary blue */
+            color: white;
+            padding: 20px 0;
+        }
+        .container {
+            background-color: #e1e3e4; /* Bootstrap light gray */
+            border-radius: 8px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <header class="text-center mb-4">
+            <h1>Per provar javascript</h1>
+        </header>
+        <p class="lead text-muted">
+            Aquest és un paràgraf senzill dissenyat amb les utilitats de tipografia de Bootstrap. No dubteu a explorar les possibilitats.
+        </p>
+        <div class="mb-3">
+            <label for="inputText" class="form-label">Enter some text:</label>
+            <input type="text" class="form-control" id="inputText" placeholder="Type here...">
+        </div>
+        <button id="clearButton" class="btn btn-dark">Clear</button>
+    </div>
+    <!-- Bootstrap JS and dependencies 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    -->
+    <script src="js/main_v2.js"/></script>
+</body>
+</html>

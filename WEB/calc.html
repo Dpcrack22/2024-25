@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precios</title>
+    <style>
+        .producto {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Calculadora de Precios</h1>
+
+    <input type="number" id="precioProducto" placeholder="Precio del producto">
+    <button id="agregarProducto">Agregar Producto</button>
+
+    <h2>Lista de Productos</h2>
+    <ul id="listaProductos"></ul>
+
+    <h3>Descuento</h3>
+    <input type="number" id="descuento" placeholder="Porcentaje de descuento">
+    <button id="calcularTotal">Calcular Total</button>
+
+    <h3>Resumen</h3>
+    <p id="totalSinDescuento">Total sin descuento: $0</p>
+    <p id="descuentoAplicado">Descuento aplicado: $0</p>
+    <p id="totalFinal">Total final: $0</p>
+
+    <script src="app2.js"></script>
+</body>
+</html>

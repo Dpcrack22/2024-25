@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Llista d'articles</title>
+    <script src="exe5.js"></script>
+    <link rel="stylesheet" href="exe5.css" type="text/css" />
+</head>
+<body>
+    <h1>Llista d'articles</h1>
+    <form id="formulari">
+        <label for="codi">Codi: </label>
+        <input type="text" name="codi" id="codi"/><br>
+        <label for="desc">Descripció: </label>
+        <input type="text" name="desc" id="desc"/><br>
+        <label for="preu">Preu: </label>
+        <input type="number" name="preu" value="0.00" id="preu"/><br>
+        <label for="unitats">Unitats: </label>
+        <input type="number" name="unitats" id="unitats" value="1"/><br>
+        <label for="descompte">Descompte: </label>
+        <input type="number" name="descompte" id="descompte" value="10"/><br>
+        <input type="button" id="boto" value="Guardar dades"></input>
+        
+    </form>
+    
+    <h3>Taula d'articles</h3>
+    <table id="taula">
+        <tr><th>Codi</th><th>Descripció</th><th>Preu</th><th>Unitats</th><th>Descompte</th><th>Preu total</th></tr>
+        
+    </table>
+    
+</body>
+</html>

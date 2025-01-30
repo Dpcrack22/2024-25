@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Filtered Dropdowns</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formulari reclamació</h1>
+    <form id="sampleForm">
+        <div class="form-group">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" placeholder="Informeu el vostre nom" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Informeu el vostre email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Categoria:</label>
+            <select id="category" name="category" onchange="updateSubcategory()" required>
+                <option value="">Tria la categoria</option>
+                <option value="electronics">Electrònica</option>
+                <option value="clothing">Roba</option>
+                <option value="books">Llibres</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="subcategory">Subcategoria:</label>
+            <select id="subcategory" name="subcategory" required>
+                <option value="">Tria la subcategoria</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Missatge:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Entra la teva reclamació"></textarea>
+        </div>
+
+        <button type="submit">Envia</button>
+    </form>
+
+    <script>
+        const subcategoryOptions = {
+            "electronics": [
+                { value: "phones", text: "Telèfons" },
+                { value: "laptops", text: "Portàtils" },
+                { value: "accessories", text: "Accessoris" }
+            ],
+            "clothing": [
+                { value: "shirts", text: "Camises" },
+                { value: "pants", text: "Pantalons" },
+                { value: "shoes", text: "Sabates" }
+            ],
+            "books": [
+                { value: "fiction", text: "Ficció" },
+                { value: "nonfiction", text: "No-Ficció" },
+                { value: "comics", text: "Cómics" }
+            ]
+        };
+
+        function updateSubcategory() {
+            const category = document.getElementById("category").value;
+            const subcategoryDropdown = document.getElementById("subcategory");
+
+            // Clear existing options
+            subcategoryDropdown.innerHTML = '<option value="">Select Subcategory</option>';
+
+            // Populate subcategory options based on category
+            if (category && subcategoryOptions[category]) {
+                subcategoryOptions[category].forEach(option => {
+                    const opt = document.createElement("option");
+                    opt.value = option.value;
+                    opt.textContent = option.text;
+                    subcategoryDropdown.appendChild(opt);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
+
