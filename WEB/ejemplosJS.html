@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo de Examen</title>
+</head>
+<body>
+  <h1 id="titulo">Haz clic en el botón</h1>
+  <button id="miBoton">Cambiar Título</button>
+  <script>
+    // Seleccionar el botón y el título
+const boton = document.getElementById("miBoton");
+const titulo = document.getElementById("titulo");
+
+// Añadir un evento al botón
+boton.addEventListener("click", function() {
+  // Cambiar el texto y el color del título
+  titulo.textContent = "¡Título Cambiado!";
+  titulo.style.color = "blue";
+});
+//Explicación:
+
+// Usamos document.getElementById() para seleccionar el botón y el título.
+
+// Añadimos un evento de clic al botón con addEventListener().
+
+// Cuando se hace clic en el botón, cambiamos el texto y el color del título.
+  </script>
+</body>
+</html>
+
+
+Funciones Ejemplos de moodle
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provar javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 20px 0;
+        }
+        .container {
+            background-color: #e1e3e4;
+            border-radius: 8px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <header class="text-center mb-4">
+            <h1>Per provar javascript</h1>
+        </header>
+        <p class="lead text-muted">
+            Aquest és un paràgraf senzill dissenyat amb les utilitats de tipografia de Bootstrap. No dubteu a explorar les possibilitats.
+        </p>
+        <div class="mb-3">
+            <label for="inputText" class="form-label">Enter some text:</label>
+            <input type="text" class="form-control" id="inputText" placeholder="Type here...">
+        </div>
+        <button id="clearButton" class="btn btn-dark">Clear</button>
+    </div>
+    <script src="">
+      // Función para autocompletar el campo de entrada
+const autofillInput = () => {
+    const inputField = document.getElementById('inputText');
+    inputField.value = "Has passat per sobre el camp d'input!";
+};
+
+// Función para limpiar el campo de entrada
+const clearInput = () => {
+    const inputField = document.getElementById('inputText');
+    logEvent(inputField.classList, 'Value before clear: ' + inputField.value);
+    inputField.value = '';
+};
+
+// Función para registrar eventos en la consola
+const logEvent = (elementType, message) => {
+    console.log(`[${elementType}] ${message}`);
+};
+
+// Añadir event listeners
+document.getElementById('inputText').addEventListener('mouseover', autofillInput);
+document.getElementById('clearButton').addEventListener('click', clearInput);
+    </script>
+</body>
+</html>
+
+Función autofillInput:
+
+Esta función se ejecuta cuando el usuario pasa el ratón sobre el campo de entrada (inputText).
+
+Selecciona el campo de entrada usando document.getElementById('inputText').
+
+Cambia el valor del campo de entrada a "Has passat per sobre el camp d'input!".
+
+Función clearInput:
+
+Esta función se ejecuta cuando el usuario hace clic en el botón "Clear".
+
+Selecciona el campo de entrada y registra su valor actual en la consola usando la función logEvent.
+
+Luego, limpia el campo de entrada estableciendo su valor a una cadena vacía ('').
+
+Función logEvent:
+
+Esta función registra mensajes en la consola.
+
+Recibe dos parámetros: elementType (el tipo de elemento) y message (el mensaje a registrar).
+
+Usa console.log para mostrar el mensaje en la consola.
+
+Event Listeners:
+
+document.getElementById('inputText').addEventListener('mouseover', autofillInput);
+
+Añade un evento mouseover al campo de entrada. Cuando el usuario pasa el ratón sobre él, se ejecuta la función autofillInput.
+
+document.getElementById('clearButton').addEventListener('click', clearInput);
+
+Añade un evento click al botón "Clear". Cuando el usuario hace clic en él, se ejecuta la función clearInput.
+
+Mejoras y Aclaraciones
+Uso de const y arrow functions:
+
+En el código, se usan const y funciones de flecha (=>), que son características modernas de JavaScript. Esto hace que el código sea más conciso y legible.
+
+Registro de Eventos:
+
+La función logEvent es útil para depurar y entender qué está sucediendo en el código. Registra el valor del campo de entrada antes de limpiarlo.
+
+Buenas Prácticas:
+
+Es una buena práctica separar el código JavaScript en funciones pequeñas y específicas, como autofillInput y clearInput. Esto hace que el código sea más modular y fácil de mantener.
+
+
+
+
+
+Ejemplo 1: Evento onresize
+Este ejemplo muestra cómo detectar cuando el usuario redimensiona la ventana del navegador y actualiza el contenido de la página con las nuevas dimensiones.
+
+<!DOCTYPE html>
+<html>
+<body onresize="myFunction()">
+    <p>Try to resize the browser window to display the windows height and width.</p>
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            let w = window.outerWidth;   // Ancho de la ventana
+            let h = window.outerHeight;  // Alto de la ventana
+            let txt = "Window size: width=" + w + ", height=" + h;
+            document.getElementById("demo").innerHTML = txt; // Actualiza el contenido del párrafo
+        }
+    </script>
+</body>
+</html>
+
+Evento onresize:
+Se activa cada vez que el usuario redimensiona la ventana del navegador.
+En este caso, llama a la función myFunction().
+
+Función myFunction:
+Obtiene el ancho (window.outerWidth) y el alto (window.outerHeight) de la ventana.
+Actualiza el contenido del elemento con ID demo para mostrar las nuevas dimensiones.
+
+
+Ejemplo 2: Filtrado con Dropdowns
+Este ejemplo muestra cómo usar eventos para filtrar elementos en una lista basándose en la selección del usuario en dos menús desplegables.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter with Dropdowns</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .filter-container {
+            margin-bottom: 20px;
+        }
+        .result {
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Filter Items</h1>
+    <div class="filter-container">
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="">All</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="books">Books</option>
+        </select>
+
+        <label for="price">Price Range:</label>
+        <select id="price">
+            <option value="">All</option>
+            <option value="low">Low (Under $50)</option>
+            <option value="medium">Medium ($50 - $100)</option>
+            <option value="high">High (Above $100)</option>
+        </select>
+
+        <button onclick="applyFilter()">Filter</button>
+    </div>
+
+    <div id="results">
+        <div class="result" data-category="electronics" data-price="high">Laptop - $1200</div>
+        <div class="result" data-category="electronics" data-price="medium">Headphones - $80</div>
+        <div class="result" data-category="clothing" data-price="low">T-shirt - $20</div>
+        <div class="result" data-category="clothing" data-price="medium">Jacket - $60</div>
+        <div class="result" data-category="books" data-price="low">Novel - $15</div>
+        <div class="result" data-category="books" data-price="high">Collector's Edition - $200</div>
+    </div>
+
+    <script>
+        function applyFilter() {
+            // Obtener los valores seleccionados
+            const category = document.getElementById("category").value;
+            const price = document.getElementById("price").value;
+
+            // Obtener todos los elementos de la lista
+            const results = document.querySelectorAll("#results .result");
+
+            // Recorrer los elementos y aplicar los filtros
+            results.forEach(result => {
+                const itemCategory = result.getAttribute("data-category");
+                const itemPrice = result.getAttribute("data-price");
+
+                // Verificar si el elemento coincide con los filtros
+                const matchesCategory = !category || itemCategory === category;
+                const matchesPrice = !price || itemPrice === price;
+
+                // Mostrar u ocultar el elemento según los filtros
+                if (matchesCategory && matchesPrice) {
+                    result.style.display = "block";
+                } else {
+                    result.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+Explicación:
+Evento onclick:
+Se activa cuando el usuario hace clic en el botón "Filter".
+Llama a la función applyFilter().
+
+Función applyFilter:
+Obtiene los valores seleccionados en los menús desplegables (category y price).
+Recorre todos los elementos de la lista y verifica si coinciden con los filtros.
+Muestra u oculta los elementos según los filtros aplicados.
+
+
+
+Ejemplo 3: Formulario con Dropdowns Filtrados
+Este ejemplo muestra cómo usar eventos para actualizar dinámicamente un menú desplegable (subcategory) basándose en la selección del usuario en otro menú (category).
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Filtered Dropdowns</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body onload="initializeForm()">
+    <h1>Sample Form</h1>
+    <form id="sampleForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="">Select Category</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="books">Books</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="subcategory">Subcategory:</label>
+            <select id="subcategory" name="subcategory" required>
+                <option value="">Select Subcategory</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const subcategoryOptions = {
+            "electronics": [
+                { value: "phones", text: "Phones" },
+                { value: "laptops", text: "Laptops" },
+                { value: "accessories", text: "Accessories" }
+            ],
+            "clothing": [
+                { value: "shirts", text: "Shirts" },
+                { value: "pants", text: "Pants" },
+                { value: "shoes", text: "Shoes" }
+            ],
+            "books": [
+                { value: "fiction", text: "Fiction" },
+                { value: "nonfiction", text: "Non-Fiction" },
+                { value: "comics", text: "Comics" }
+            ]
+        };
+
+        function initializeForm() {
+            const categoryDropdown = document.getElementById("category");
+            const subcategoryDropdown = document.getElementById("subcategory");
+
+            categoryDropdown.addEventListener("change", () => {
+                const category = categoryDropdown.value;
+
+                // Limpiar las opciones existentes
+                subcategoryDropdown.innerHTML = '<option value="">Select Subcategory</option>';
+
+                // Poblar las opciones de subcategoría basadas en la categoría seleccionada
+                if (category && subcategoryOptions[category]) {
+                    subcategoryOptions[category].forEach(option => {
+                        const opt = document.createElement("option");
+                        opt.value = option.value;
+                        opt.textContent = option.text;
+                        subcategoryDropdown.appendChild(opt);
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+Explicación:
+Evento onload:
+Se activa cuando la página se carga completamente.
+Llama a la función initializeForm().
+
+Función initializeForm:
+Añade un evento change al menú desplegable category.
+Cuando el usuario selecciona una categoría, se actualizan las opciones del menú subcategory dinámicamente.
+
+Objeto subcategoryOptions:
+Contiene las opciones de subcategoría para cada categoría.
+Se usa para poblar el menú subcategory basándose en la selección del usuario
+
+
+
+
+
+
+
+Partes Importantes del Código
+Seleccionar Elementos del DOM:
+El DOM (Document Object Model) es la estructura de la página web.
+Puedes seleccionar elementos usando document.getElementById, document.querySelector, etc.
+
+let titulo = document.getElementById("titulo"); // Selecciona un elemento por su ID
+
+Cambiar el Contenido de un Elemento:
+Usa innerHTML o textContent para cambiar el texto o HTML de un elemento.
+
+titulo.innerHTML = "¡Nuevo título!";
+
+Escuchar Eventos:
+Los eventos son acciones del usuario, como hacer clic en un botón o mover el mouse.
+Puedes usar addEventListener para asignar una función a un evento.
+
+boton.addEventListener("click", function() {
+    alert("¡Hiciste clic!");
+});
+
+
+Ejemplo Básico: Cambiar Texto con un Botón
+Vamos a crear una página web sencilla donde un botón cambie el texto de un párrafo.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ejemplo Básico</title>
+</head>
+<body>
+    <p id="texto">Este es un texto inicial.</p>
+    <button id="boton">Cambiar Texto</button>
+
+    <script>
+        // Seleccionar el botón y el párrafo
+        let boton = document.getElementById("boton");
+        let texto = document.getElementById("texto");
+
+        // Añadir un evento al botón
+        boton.addEventListener("click", function() {
+            texto.innerHTML = "¡El texto ha cambiado!";
+        });
+    </script>
+</body>
+</html>
+
+
+Otro Ejemplo: Sumar Dos Números
+Vamos a crear una página donde el usuario ingrese dos números y un botón muestre la suma.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sumar Números</title>
+</head>
+<body>
+    <input type="number" id="numero1" placeholder="Número 1">
+    <input type="number" id="numero2" placeholder="Número 2">
+    <button id="botonSumar">Sumar</button>
+    <p id="resultado"></p>
+
+    <script>
+        // Seleccionar elementos
+        let botonSumar = document.getElementById("botonSumar");
+        let resultado = document.getElementById("resultado");
+
+        // Añadir evento al botón
+        botonSumar.addEventListener("click", function() {
+            // Obtener los valores de los inputs
+            let num1 = parseFloat(document.getElementById("numero1").value);
+            let num2 = parseFloat(document.getElementById("numero2").value);
+
+            // Calcular la suma
+            let suma = num1 + num2;
+
+            // Mostrar el resultado
+            resultado.innerHTML = "La suma es: " + suma;
+        });
+    </script>
+</body>
+</html>
+

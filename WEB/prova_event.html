@@ -1,0 +1,16 @@
+<button id="myButton">Click me</button>
+<div id="output"></div>
+
+<script>
+  const output = document.querySelector("#output");
+
+  function handleClick(e) {
+    output.textContent = `Event type: ${e.type}\n`;
+    output.textContent += `Clicked element: ${e.target.tagName}\n`;
+    output.textContent += `Handler attached to: ${e.currentTarget.tagName}\n`;
+    output.textContent += `Mouse position: (${e.clientX}, ${e.clientY})\n`;
+  }
+
+  const button = document.querySelector("#myButton");
+  button.addEventListener("click", handleClick);
+</script>

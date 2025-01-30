@@ -1,0 +1,325 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: lightseagreen;
+  color: white;
+}
+  
+h1 {
+text-align: center;
+color: darkslategrey;
+}
+
+.container {
+margin-top: 30px;
+margin-bottom: 30px;
+width: 30%;
+margin-left: auto;
+margin-right: auto;
+background-color: white;
+padding: 30px;
+}
+
+.search {
+margin-left: auto;
+margin-right: auto;
+width: 100%;
+}
+
+form {
+display: flex;
+}
+
+input {
+padding: 15px 10px;
+outline: none;
+width: 400px;
+}
+
+.li-container {
+background-color: white;
+width: 100%;
+color: darkslategray;
+margin-top: 20px;
+}
+
+ul {
+padding: 0;
+}
+
+li {
+list-style: none;
+background-color: lightgray;
+border-radius: 10px;
+margin-top: 15px;
+display: flex;
+}
+
+li p {
+margin: 0;
+padding: 15px;
+width: 100%;
+}
+
+.btn-delete {
+margin-left: auto;
+border: none;
+background-color: #e31746;
+color: white;
+font-weight: bold;
+padding: 5px 10px;
+outline: none;
+width: 10%;
+font-size: 1.2em;
+}
+
+.btn-delete:hover {
+cursor: pointer;
+background-color: lightseagreen;
+}
+
+.btn-add {
+padding: 5px 15px;
+border: none;
+color: white;
+font-family: fantasy;
+background-color: teal;
+font-size: 1.4rem;
+outline: none;
+}
+
+.btn-add:hover {
+cursor: pointer;
+background-color: darkcyan;
+}
+
+.empty {
+color: darkslategrey;
+}body {
+margin: 0;
+padding: 0;
+font-size: 16px;
+font-family: Arial, Helvetica, sans-serif;
+line-height: 1.5;
+background-color: lightseagreen;
+color: white;
+}
+
+h1 {
+text-align: center;
+color: darkslategrey;
+}
+
+.container {
+margin-top: 30px;
+margin-bottom: 30px;
+width: 30%;
+margin-left: auto;
+margin-right: auto;
+background-color: white;
+padding: 30px;
+}
+
+.search {
+margin-left: auto;
+margin-right: auto;
+width: 100%;
+}
+
+form {
+display: flex;
+}
+
+input {
+padding: 15px 10px;
+outline: none;
+width: 90%;
+}
+
+.li-container {
+background-color: white;
+width: 100%;
+color: darkslategray;
+margin-top: 20px;
+}
+
+ul {
+padding: 0;
+}
+
+li {
+list-style: none;
+background-color: lightgray;
+border-radius: 10px;
+margin-top: 15px;
+display: flex;
+}
+
+li p {
+margin: 0;
+padding: 15px;
+width: 100%;
+}
+
+.btn-delete {
+margin-left: auto;
+border: none;
+background-color: #e31746;
+color: white;
+font-weight: bold;
+padding: 5px 10px;
+outline: none;
+width: 10%;
+font-size: 1.2em;
+}
+
+.btn-delete:hover {
+cursor: pointer;
+background-color: lightseagreen;
+}
+
+.btn-add {
+padding: 5px 15px;
+border: none;
+color: white;
+font-family: fantasy;
+background-color: teal;
+font-size: 1.4rem;
+outline: none;
+}
+
+.btn-add:hover {
+cursor: pointer;
+background-color: darkcyan;
+}
+
+.empty {
+color: darkslategrey;
+}
+
+
+.btn-disable {
+margin-left: auto;
+border: none;
+background-color: green;
+color: white;
+font-weight: bold;
+padding: 5px 10px;
+outline: none;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+width: 10%;
+font-size: 1.2em;
+}
+
+.btn-disable:hover {
+cursor: pointer;
+background-color: lightseagreen;
+}
+
+
+.btn-delete-dis {
+margin-left: auto;
+border: none;
+background-color: grey;
+color: white;
+font-weight: bold;
+padding: 5px 10px;
+outline: none;
+width: 10%;
+font-size: 1.2em;
+}
+
+.btn-disable-dis {
+margin-left: auto;
+border: none;
+background-color: rgb(155, 150, 150);
+color: white;
+font-weight: bold;
+padding: 5px 10px;
+outline: none;
+border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
+width: 10%;
+font-size: 1.2em;
+}
+
+
+.up-btn {
+margin-left: auto;
+border: none;
+background-color: rgb(73, 73, 158);
+color: white;
+font-weight: bold;
+padding: 5px 10px;
+outline: none;
+width: 10%;
+font-size: 1.2em;
+}
+
+.up-btn:hover {
+cursor: pointer;
+background-color: rgb(105, 233, 154);
+}
+
+.down-btn {
+  margin-left: auto;
+  border: none;
+  background-color: rgb(236, 100, 134);
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  outline: none;
+  width: 10%;
+  font-size: 1.2em;
+  }
+  
+  .down-btn:hover {
+  cursor: pointer;
+  background-color: rgb(105, 233, 154);
+  }
+
+
+
+.down-btn-ds {
+margin-left: auto;
+border: none;
+background-color: rgb(155, 150, 150);
+color: white;
+font-weight: bold;
+padding: 5px 10px;
+outline: none;
+width: 10%;
+font-size: 1.2em;
+}
+
+.up-btn-ds {
+  margin-left: auto;
+  border: none;
+  background-color: rgb(155, 150, 150);
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  outline: none;
+  width: 10%;
+  font-size: 1.2em;
+  }
+
+.btn-reset {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: rgb(175, 4, 38);
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-reset:hover {
+  background-color: darkred;
+}

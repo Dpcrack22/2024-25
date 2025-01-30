@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Filtered Dropdowns</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body onload="initializeForm()">
+    <h1>Sample Form</h1>
+    <form id="sampleForm">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="">Select Category</option>
+                <option value="electronics">Electronics</option>
+                <option value="clothing">Clothing</option>
+                <option value="books">Books</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="subcategory">Subcategory:</label>
+            <select id="subcategory" name="subcategory" required>
+                <option value="">Select Subcategory</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const subcategoryOptions = {
+            "electronics": [
+                { value: "phones", text: "Phones" },
+                { value: "laptops", text: "Laptops" },
+                { value: "accessories", text: "Accessories" }
+            ],
+            "clothing": [
+                { value: "shirts", text: "Shirts" },
+                { value: "pants", text: "Pants" },
+                { value: "shoes", text: "Shoes" }
+            ],
+            "books": [
+                { value: "fiction", text: "Fiction" },
+                { value: "nonfiction", text: "Non-Fiction" },
+                { value: "comics", text: "Comics" }
+            ]
+        };
+
+        function initializeForm() {
+            const categoryDropdown = document.getElementById("category");
+            const subcategoryDropdown = document.getElementById("subcategory");
+
+            categoryDropdown.addEventListener("change", () => {
+                const category = categoryDropdown.value;
+
+                // Clear existing options
+                subcategoryDropdown.innerHTML = '<option value="">Select Subcategory</option>';
+
+                // Populate subcategory options based on category
+                if (category && subcategoryOptions[category]) {
+                    subcategoryOptions[category].forEach(option => {
+                        const opt = document.createElement("option");
+                        opt.value = option.value;
+                        opt.textContent = option.text;
+                        subcategoryDropdown.appendChild(opt);
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
