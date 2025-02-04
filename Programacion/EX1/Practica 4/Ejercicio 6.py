@@ -1,6 +1,0 @@
-A = float(input("Dame un numero: "))
-B = float(input("Dame otro numero: "))
-print(A+B)
-print(A-B)
-print(A*B)
-print(A//B)
