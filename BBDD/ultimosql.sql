@@ -2,8 +2,6 @@
 Conceptos clave:
 Sintaxis básica para crear tablas: */
  
-
-
 CREATE TABLE nom_taula (
     nom_camp tipus_dada [restricció],
     ...
@@ -119,3 +117,112 @@ Modificar dades: Saber inserir, actualitzar i eliminar registres.
 Alterar taules: Afegir, modificar o eliminar columnes i crear restriccions.
 Consultes: Utilitzar SELECT amb filtres (WHERE), agrupacions (GROUP BY), unions (JOIN), i crear vistes per dades específiques.
  */
+
+
+
+
+
+
+
+
+
+ 1. Representants de vendes (salesRepEmployeeNumber) que tenen mes de 6 clients.
+Mostrar dades del representador de vendes: numero dempleat, nom, cognom i la quantitat de clients
+
+2. Comandes dels clients del representatn de vendes 1370 (Gerard Hernandez) realitzades al 2005
+Mostrar del client el seu nom i de la comanda (numero, data de la comanda i status)
+
+3. Pagaments realitzats pels clients. Nomes aquells pagaments d'import(amount) superior a 55000
+Mostrar nom del client, quantitat de pagament(superior a 55000) i suma total pagada ordenar per suma total pagada descendentment
+
+4. Comandes ralitzades de productes del vendedor "Welly DieCast Productions" el primer semeste de 2003
+Mostrar vendedor del producte (producVendor), nom del producte, quantitat demanada (quantityOrdered), preu unitat(priceEach) i data de la comanda
+Ordenar per nom del producte i data de la comanda de la mes nova a la mes antiga
+
+Ten la base de datos y azme lo siguiente:
+CREATE DATABASE private_clinic_PereraDavid;
+
+use private_clinic_PereraDavid;
+
+CREATE TABLE  Appointment(
+    AppointmentID INT AUTO_INCREMENT PRIMARY KEY,
+    ClientID INT,
+    SpecialistID INT,
+    AppointmentDateTime DATETIME,
+    Reason TEXT(30),
+    Status ENUM("Scheduled","Completed" , "Canceled")
+);
+
+CREATE TABLE  Client(
+    ClientID INT AUTO_INCREMENT PRIMARY KEY,
+    FirstName Varchar(50),
+    LastName Varchar(50),
+    DateOfBirth Date,
+    PhoneNumber Varchar(15),
+    Email Varchar(100),
+    Address TEXT
+);
+ALTER TABLE appointment ADD FOREIGN KEY (ClientID) REFERENCES client(ClientID);
+
+
+CREATE TABLE  Specialist(
+    SpecialistID INT AUTO_INCREMENT PRIMARY KEY,
+    FirstName Varchar(50),
+    LastName Varchar(50),
+    Specialy Varchar(100),
+    PhoneNumber Varchar(15),
+    Email Varchar(100)
+);
+ALTER TABLE appointment ADD FOREIGN KEY (SpecialistID) REFERENCES specialist(SpecialistID);
+
+CREATE TABLE  Invoice(
+    invoiceID INT AUTO_INCREMENT PRIMARY KEY,
+    AppointmentID INT,
+    IssueDate DATE,
+    TotalAmount Decimal(10,2),
+    PaidStatus ENUM("Unpaid", "Paid", "Partial"),
+    FOREIGN KEY (AppointmentID) REFERENCES appointment(AppointmentID)
+);
+
+CREATE TABLE Intervention (
+    InterventionID INT AUTO_INCREMENT PRIMARY KEY,
+    AppointmentID INT,
+    Description TEXT,
+    FOREIGN KEY (AppointmentID) REFERENCES appointment(AppointmentID)
+
+);
+
+
+/* 2 */
+Crea una cita pels clients anteriors amb la especialista cardiologica recorda que no es poden fer servir les id per el WHERE
+( los clientes de antes se llaman Caroline Perry i William Green)
+esto en una sola queri o linia sabes como hacerlo ?
+
+/* 3 */
+Elimina els clients q no tinguin cap cita
+
+
+/* 4 */
+Fent servir sentencies alter feu les modificaccions seguents a les taules de la bd
+Afegir una columna nova a la intervencion(intervention) La columna a afegir es diu scheduledDate, data planificada, no es obligatoria
+Despres de crearla fer una sentencia update per actualizarla, el valor sheduleDate es el del dia posterior a la cita amb la que esta lligada
+
+-- Buscar el ID del especialista en cardiología
+SELECT SpecialistID FROM Specialist WHERE Specialy = 'Cardiology';
+
+-- Buscar los IDs de los clientes Caroline Perry y William Green
+SELECT ClientID FROM Client WHERE FirstName = 'Caroline' AND LastName = 'Perry';
+SELECT ClientID FROM Client WHERE FirstName = 'William' AND LastName = 'Green';
+
+-- Crear las citas
+INSERT INTO Appointment (ClientID, SpecialistID, AppointmentDateTime, Reason, Status)
+SELECT c.ClientID, s.SpecialistID, '2025-02-01 10:00:00', 'General checkup', 'Scheduled'
+FROM Client c, Specialist s
+WHERE c.FirstName = 'Caroline' AND c.LastName = 'Perry'
+AND s.Specialy = 'Cardiology';
+
+INSERT INTO Appointment (ClientID, SpecialistID, AppointmentDateTime, Reason, Status)
+SELECT c.ClientID, s.SpecialistID, '2025-02-01 11:00:00', 'General checkup', 'Scheduled'
+FROM Client c, Specialist s
+WHERE c.FirstName = 'William' AND c.LastName = 'Green'
+AND s.Specialy = 'Cardiology';
