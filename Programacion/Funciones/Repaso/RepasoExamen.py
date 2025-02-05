@@ -61,7 +61,7 @@ def añadir_user(diccionario):
 
     diccionario[DNI] = nuevo_usuario
     print(diccionario)
-
+añadir_user(personas)
 
 
 def ordenadiccionario(diccionario,criterio="",orden="asc"):
@@ -77,18 +77,18 @@ def ordenadiccionario(diccionario,criterio="",orden="asc"):
                         claves[i] = claves[i+1]
                         claves[i+1] = aux
 
-                    else:
-                        if claves[i] < claves[i + 1]:
-                            cambios = True
-                            aux = claves[i]
-                            claves[i] = claves[i + 1]
-                            claves[i + 1] = aux
+                else:
+                    if claves[i] < claves[i + 1]:
+                        cambios = True
+                        aux = claves[i]
+                        claves[i] = claves[i + 1]
+                        claves[i + 1] = aux
             if not cambios:
                 return claves
 
     else:
         #if type(diccionario[claves[0]][criterio]) == int or type(diccionario[claves[0]][criterio]) == float or type(diccionario[claves[0]][criterio]) == str:
-        if type(diccionario[claves[0]][criterio]) in ( int, float, str):
+        if type(diccionario[claves[0]][criterio]) in (int, float, str):
             for pasadas in range(len(claves) - 1):
                 cambios = False
                 for i in range(len(claves) - 1 - pasadas):
@@ -99,12 +99,12 @@ def ordenadiccionario(diccionario,criterio="",orden="asc"):
                             claves[i] = claves[i + 1]
                             claves[i + 1] = aux
 
-                        else:
-                            if claves[i][criterio] < claves[i + 1][criterio]:
-                                cambios = True
-                                aux = claves[i]
-                                claves[i] = claves[i + 1]
-                                claves[i + 1] = aux
+                    else:
+                        if diccionario[claves[i]][criterio] < diccionario[claves[i+1]][criterio]:
+                            cambios = True
+                            aux = claves[i]
+                            claves[i] = claves[i + 1]
+                            claves[i + 1] = aux
                 if not cambios:
                     return claves
         else:
@@ -113,7 +113,7 @@ def ordenadiccionario(diccionario,criterio="",orden="asc"):
                 for i in range(len(claves) - 1 - pasadas):
                     sumai = 0
                     sumai1 = 0
-                    for num in diccionario[claves[i][criterio]][criterio]:
+                    for num in diccionario[claves[i]][criterio]:
                         sumai += num
                     for num in diccionario[claves[i+1]][criterio]:
                         sumai1 += num
@@ -134,4 +134,4 @@ def ordenadiccionario(diccionario,criterio="",orden="asc"):
                     return claves
     return claves
     
-print(ordenadiccionario(personas,criterio="nombre",orden=""))
+print(ordenadiccionario(personas,criterio="apellidos",orden=""))
