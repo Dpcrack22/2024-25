@@ -26,7 +26,7 @@
 # test(listaa)
 # print(listaa)
 
-menu00 = ("Opcion1","Opcion2","Opcion3","Opcion4")
+menu00 = ("Opcion1","Opcion2","Opcion3","Opcion4","Opcion5")
 def menus(tupla):
     menu = ""
     for i in range(len(tupla)):

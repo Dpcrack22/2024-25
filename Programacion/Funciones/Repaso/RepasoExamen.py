@@ -20,7 +20,6 @@ def imprimir_menu():
     for clave, valor in menu_dict.items():
         print(f"{clave}) {valor}")
     
-# Llamar a la función para ver los resultados
 
 
 personas = {
@@ -61,7 +60,6 @@ def añadir_user(diccionario):
 
     diccionario[DNI] = nuevo_usuario
     print(diccionario)
-añadir_user(personas)
 
 
 def ordenadiccionario(diccionario,criterio="",orden="asc"):
@@ -134,4 +132,17 @@ def ordenadiccionario(diccionario,criterio="",orden="asc"):
                     return claves
     return claves
     
-print(ordenadiccionario(personas,criterio="apellidos",orden=""))
+
+
+def imprimir_diccionario_ordenado(diccionario, criterio="", orden="asc"):
+    claves_ordenadas = ordenadiccionario(diccionario, criterio, orden)
+    
+    for clave in claves_ordenadas:
+        print("DNI: {}".format(clave))
+        for campo, valor in diccionario[clave].items():
+            print("  {}: {}".title().format(campo, valor))
+        print("-" * 40)
+
+imprimir_diccionario_ordenado(personas, criterio="apellidos", orden="asc")
+
+
