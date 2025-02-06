@@ -1,0 +1,79 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<gym_database type="database">
+    <users type="table">
+        <user id_usuari="1" id_abonament="A1">
+            <DNI>12345678A</DNI>
+            <name>Marc</name>
+            <surname>Perez</surname>
+            <phone>600123456</phone>
+            <email>marc.perez@email.com</email>
+            <address>Carrer Major, 12</address>
+            <postal_code>08001</postal_code>
+        </user>
+        <user id_usuari="2" id_abonament="A2">
+            <DNI>87654321B</DNI>
+            <name>Laura</name>
+            <surname>Garcia</surname>
+            <phone>601234567</phone>
+            <email>laura.garcia@email.com</email>
+            <address>Avinguda Diagonal, 45</address>
+            <postal_code>08002</postal_code>
+        </user>
+        <user id_usuari="3" id_abonament="A3">
+            <DNI>23456789C</DNI>
+            <name>David</name>
+            <surname>Lopez</surname>
+            <phone>602345678</phone>
+            <email>david.lopez@email.com</email>
+            <address>Rambla Catalunya, 78</address>
+            <postal_code>08003</postal_code>
+        </user>
+        <user id_usuari="4" id_abonament="A4">
+            <DNI>34567890D</DNI>
+            <name>Anna</name>
+            <surname>Martinez</surname>
+            <phone>603456789</phone>
+            <email>anna.martinez@email.com</email>
+            <address>Plaça Catalunya, 5</address>
+            <postal_code>08004</postal_code>
+        </user>
+        <user id_usuari="5" id_abonament="A5">
+            <DNI>45678901E</DNI>
+            <name>Carlos</name>
+            <surname>Fernandez</surname>
+            <phone>604567890</phone>
+            <email>carlos.fernandez@email.com</email>
+            <address>Gran Via, 88</address>
+            <postal_code>08005</postal_code>
+        </user>
+    </users>
+    <providers type="table">
+        <provider id_proveidor="P1">
+            <NIF>12345678X</NIF>
+            <name>FitEquip</name>
+            <phone>611111111</phone>
+            <email>info@fitequip.com</email>
+            <address>Carrer de l'Esport, 10</address>
+            <ids_productes>P1, P2</ids_productes>
+            <contact_person>Joan Roca</contact_person>
+        </provider>
+    </providers>
+    <products type="table">
+        <product id_producte="P1">
+            <name>Pesa 10kg</name>
+            <fungible>false</fungible>
+            <quantitat_actual>20</quantitat_actual>
+        </product>
+    </products>
+    <subscriptions type="table">
+        <subscription id_abonament="A1" id_horari="H1">
+            <description>Abonament mensual bàsic</description>
+        </subscription>
+    </subscriptions>
+    <schedules type="table">
+        <schedule id_horari="H1">
+            <valid_days>Dilluns-Divendres</valid_days>
+            <valid_hours>08:00-22:00</valid_hours>
+        </schedule>
+    </schedules>
+</gym_database>
