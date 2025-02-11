@@ -76,7 +76,6 @@ def guardar_contacto(nombre_fichero):
     ficherito.close()
 
 
-guardar_contacto("Contactos")
 
 
 
