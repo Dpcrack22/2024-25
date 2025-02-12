@@ -123,3 +123,14 @@ def recuperar_contactos_3(nombre_fichero):
 # Prueba con un archivo llamado "Contactos3.txt"
 recuperar_contactos_3("Contactos3.txt")
 
+"""
+'r': Lectura.
+'w': Escritura (sobrescribe el archivo si existe).
+'a': Añadir (agrega al final del archivo).
+'x': Crear exclusivamente (lanza error si el archivo existe).
+'b': Modo binario (para archivos no de texto).
+'t': Modo texto (por defecto, no es necesario especificarlo).
+'r+': Lectura y escritura (el archivo debe existir).
+'w+': Lectura y escritura (sobrescribe el archivo si existe).
+'a+': Lectura y añadir (si no existe, lo crea).
+"""
