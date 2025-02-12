@@ -1,0 +1,9 @@
+dni: 47894187K * nombre: David * apellido: Perera* tfn: 611862550, 640604290* direccion: Av. Carrilet num.4
+dni: 47894186K * tfn: 611324556, 640606543  * apellido: Perera* nombre: Alejandro * direccion: Av. Carrilet num.2
+dni: 47894189K * direccion: Av. Riera num.2 * tfn: 611777556  * apellido: Piedra* nombre: Pedro
+47894187K * David * Perera* 611862550, 640604290* Av. Carrilet num.4
+47894186K * 611324556, 640606543  * Perera* Alejandro * Av. Carrilet num.2
+47894189K * Av. Riera num.2 * 611777556  * Piedra* Pedro
+47894187K * David ; Perera. 611862550, 640604290 - Av. Carrilet num.4
+47894186K * Alejandro  ; Perera. 611324556, 640606543 - Av. Carrilet num.2
+47894189K * Pedro ; Piedra. 611777556 - Av. Riera num.2
