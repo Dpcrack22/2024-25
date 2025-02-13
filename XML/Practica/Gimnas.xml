@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gimnasio>
-    <!-- Usuarios -->
     <usuarios>
         <usuario id_usuari="1">
             <DNI>12345678A</DNI>
@@ -54,7 +53,6 @@
         </usuario>
     </usuarios>
 
-    <!-- Proveedores -->
     <proveedores>
         <proveedor id_proveïdor="1">
             <NIF>A12345678</NIF>
@@ -103,7 +101,6 @@
         </proveedor>
     </proveedores>
 
-    <!-- Productos -->
     <productos>
         <producto id_producte="1">
             <nombre>Máquina de correr</nombre>
@@ -157,7 +154,6 @@
         </producto>
     </productos>
 
-    <!-- Abonamientos -->
     <abonamientos>
         <abonament id_abonament="1">
             <id_horari>1</id_horari>
@@ -181,7 +177,6 @@
         </abonament>
     </abonamientos>
 
-    <!-- Horarios -->
     <horarios>
         <horario id_horari="1">
             <dias_validos>Lunes a Viernes</dias_validos>

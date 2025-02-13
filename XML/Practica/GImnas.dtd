@@ -1,0 +1,37 @@
+<!ELEMENT gimnasio (usuarios, proveedores, productos, abonamientos, horarios)>
+<!ELEMENT usuarios (usuario+)>
+<!ELEMENT usuario (DNI, nombre, cognoms, telefono, email, direccion, codigo_postal, id_abonament)>
+<!ATTLIST usuario id_usuari ID #REQUIRED>
+
+<!ELEMENT proveedores (proveedor+)>
+<!ELEMENT proveedor (NIF, nombre, telefono, email, direccion, ids_productos, persona_contacte)>
+<!ATTLIST proveedor id_proveïdor ID #REQUIRED>
+
+<!ELEMENT productos (producto+)>
+<!ELEMENT producto (nombre, fungible, cantidad_actual)>
+<!ATTLIST producto id_producte ID #REQUIRED>
+
+<!ELEMENT abonamientos (abonament+)>
+<!ELEMENT abonament (id_horari, descripcion)>
+<!ATTLIST abonament id_abonament ID #REQUIRED>
+
+<!ELEMENT horarios (horario+)>
+<!ELEMENT horario (dias_validos, horas_validas)>
+<!ATTLIST horario id_horari ID #REQUIRED>
+
+<!-- Definimos los elementos internos -->
+<!ELEMENT DNI (#PCDATA)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT cognoms (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT direccion (#PCDATA)>
+<!ELEMENT codigo_postal (#PCDATA)>
+<!ELEMENT id_abonament (#PCDATA)>
+<!ELEMENT NIF (#PCDATA)>
+<!ELEMENT ids_productos (#PCDATA)>
+<!ELEMENT persona_contacte (#PCDATA)>
+<!ELEMENT cantidad_actual (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT dias_validos (#PCDATA)>
+<!ELEMENT horas_validas (#PCDATA)>
