@@ -4,13 +4,13 @@ public class FirstObjectt {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] miArray = new int[5];
-		int[] miArray1 = new int[5];
+		// int[] miArray = new int[5];
+		// int[] miArray1 = new int[5];
 		
 		// MiClase nombrecito = new MiClase();
-		MiClase nombrecito1 = new MiClase();
-		MiClase nombrecito2 = new MiClase();
-	//	Classes | Objetos
+		// MiClase nombrecito1 = new MiClase();
+		// MiClase nombrecito2 = new MiClase();
+	//	   Classes | Objetos
 		
 		// nombrecito.a = 5;
 		// nombrecito1.a = 6;
@@ -40,10 +40,12 @@ public class FirstObjectt {
 		// nombrecito.setA(10);
 		// System.out.println(nombrecito.getA());
 		
-		MiClasse nombrecito = new MiClase(500,"Si");
-		System.out.println(nombrecito);
+		// Imprimir todos los elementos
+		// MiClasse nombrecito = new MiClase(500,"Si");
+		// System.out.println(nombrecito);
 
-
+		//Herencia
+		
 	}
 	
 	
