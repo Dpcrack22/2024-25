@@ -3,7 +3,7 @@ package PgOrOBJ.magic;
 import java.lang.Math;
 import java.util.Arrays;
 
-public class MainClass {
+public class MainClass3Cht {
 
 	public static void main(String[] args) {
 		Carta[] cartas = new Carta[20];
