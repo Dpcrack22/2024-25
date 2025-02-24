@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gimnasio>
+    <usuarios>
+        <usuario id_usuari="1">
+            <DNI>12345678A</DNI>
+            <nombre>Juan</nombre>
+            <cognoms>Pérez García</cognoms>
+            <telefono>612345678</telefono>
+            <email>juanperez@email.com</email>
+            <direccion>Calle Falsa 123</direccion>
+            <codigo_postal>08001</codigo_postal>
+            <id_abonament>1</id_abonament>
+        </usuario>
+        <usuario id_usuari="2">
+            <DNI>23456789B</DNI>
+            <nombre>Ana</nombre>
+            <cognoms>Rodríguez López</cognoms>
+            <telefono>623456789</telefono>
+            <email>anarodriguez@email.com</email>
+            <direccion>Avenida Primavera 45</direccion>
+            <codigo_postal>08002</codigo_postal>
+            <id_abonament>2</id_abonament>
+        </usuario>
+        <usuario id_usuari="3">
+            <DNI>34567890C</DNI>
+            <nombre>Pedro</nombre>
+            <cognoms>Gómez Martín</cognoms>
+            <telefono>634567890</telefono>
+            <email>pedrogomez@email.com</email>
+            <direccion>Calle del Sol 789</direccion>
+            <codigo_postal>08003</codigo_postal>
+            <id_abonament>3</id_abonament>
+        </usuario>
+        <usuario id_usuari="4">
+            <DNI>45678901D</DNI>
+            <nombre>Lucía</nombre>
+            <cognoms>Martínez Fernández</cognoms>
+            <telefono>645678901</telefono>
+            <email>luciamartinez@email.com</email>
+            <direccion>Calle Luna 321</direccion>
+            <codigo_postal>08004</codigo_postal>
+            <id_abonament>4</id_abonament>
+        </usuario>
+        <usuario id_usuari="5">
+            <DNI>56789012E</DNI>
+            <nombre>Mario</nombre>
+            <cognoms>Hernández Pérez</cognoms>
+            <telefono>656789012</telefono>
+            <email>mariohernandez@email.com</email>
+            <direccion>Calle Estrella 456</direccion>
+            <codigo_postal>08005</codigo_postal>
+            <id_abonament>5</id_abonament>
+        </usuario>
+    </usuarios>
+
+    <proveedores>
+        <proveedor id_proveïdor="1">
+            <NIF>A12345678</NIF>
+            <nombre>FitPro S.A.</nombre>
+            <telefono>677123456</telefono>
+            <email>contacto@fitpro.com</email>
+            <direccion>Calle del Deporte 1</direccion>
+            <ids_productos>1,2,3</ids_productos>
+            <persona_contacte>Juan López</persona_contacte>
+        </proveedor>
+        <proveedor id_proveïdor="2">
+            <NIF>B23456789</NIF>
+            <nombre>SportEquip</nombre>
+            <telefono>688234567</telefono>
+            <email>info@sportequip.com</email>
+            <direccion>Avenida Fitness 23</direccion>
+            <ids_productos>4,5,6</ids_productos>
+            <persona_contacte>Ana Sánchez</persona_contacte>
+        </proveedor>
+        <proveedor id_proveïdor="3">
+            <NIF>C34567890</NIF>
+            <nombre>HealthyGear</nombre>
+            <telefono>699345678</telefono>
+            <email>ventas@healthygear.com</email>
+            <direccion>Calle Bienestar 11</direccion>
+            <ids_productos>7,8,9</ids_productos>
+            <persona_contacte>Pablo González</persona_contacte>
+        </proveedor>
+        <proveedor id_proveïdor="4">
+            <NIF>D45678901</NIF>
+            <nombre>PowerFit</nombre>
+            <telefono>710456789</telefono>
+            <email>atencion@powerfit.com</email>
+            <direccion>Calle Fuerza 77</direccion>
+            <ids_productos>10,1,4</ids_productos>
+            <persona_contacte>Carla Rodríguez</persona_contacte>
+        </proveedor>
+        <proveedor id_proveïdor="5">
+            <NIF>E56789012</NIF>
+            <nombre>ProFit</nombre>
+            <telefono>721567890</telefono>
+            <email>contacto@profit.com</email>
+            <direccion>Avenida Fitness 44</direccion>
+            <ids_productos>2,6,7</ids_productos>
+            <persona_contacte>Tomás Pérez</persona_contacte>
+        </proveedor>
+    </proveedores>
+
+    <productos>
+        <producto id_producte="1">
+            <nombre>Máquina de correr</nombre>
+            <fungible>false</fungible>
+            <cantidad_actual>10</cantidad_actual>
+        </producto>
+        <producto id_producte="2">
+            <nombre>Pesa 10kg</nombre>
+            <fungible>true</fungible>
+            <cantidad_actual>50</cantidad_actual>
+        </producto>
+        <producto id_producte="3">
+            <nombre>Banco de pesas</nombre>
+            <fungible>false</fungible>
+            <cantidad_actual>5</cantidad_actual>
+        </producto>
+        <producto id_producte="4">
+            <nombre>Mancuernas</nombre>
+            <fungible>true</fungible>
+            <cantidad_actual>20</cantidad_actual>
+        </producto>
+        <producto id_producte="5">
+            <nombre>Estera de yoga</nombre>
+            <fungible>true</fungible>
+            <cantidad_actual>15</cantidad_actual>
+        </producto>
+        <producto id_producte="6">
+            <nombre>Pelota medicinal</nombre>
+            <fungible>true</fungible>
+            <cantidad_actual>25</cantidad_actual>
+        </producto>
+        <producto id_producte="7">
+            <nombre>Ropa deportiva</nombre>
+            <fungible>true</fungible>
+            <cantidad_actual>30</cantidad_actual>
+        </producto>
+        <producto id_producte="8">
+            <nombre>Elíptica</nombre>
+            <fungible>false</fungible>
+            <cantidad_actual>3</cantidad_actual>
+        </producto>
+        <producto id_producte="9">
+            <nombre>Bicicleta estática</nombre>
+            <fungible>false</fungible>
+            <cantidad_actual>7</cantidad_actual>
+        </producto>
+        <producto id_producte="10">
+            <nombre>Suplemento proteico</nombre>
+            <fungible>true</fungible>
+            <cantidad_actual>100</cantidad_actual>
+        </producto>
+    </productos>
+
+    <abonamientos>
+        <abonament id_abonament="1">
+            <id_horari>1</id_horari>
+            <descripcion>Acceso ilimitado al gimnasio</descripcion>
+        </abonament>
+        <abonament id_abonament="2">
+            <id_horari>2</id_horari>
+            <descripcion>Acceso limitado a horarios de tarde</descripcion>
+        </abonament>
+        <abonament id_abonament="3">
+            <id_horari>3</id_horari>
+            <descripcion>Acceso solo a clases de yoga</descripcion>
+        </abonament>
+        <abonament id_abonament="4">
+            <id_horari>4</id_horari>
+            <descripcion>Acceso al gimnasio solo fines de semana</descripcion>
+        </abonament>
+        <abonament id_abonament="5">
+            <id_horari>5</id_horari>
+            <descripcion>Acceso a clases de entrenamiento personalizado</descripcion>
+        </abonament>
+    </abonamientos>
+
+    <horarios>
+        <horario id_horari="1">
+            <dias_validos>Lunes a Viernes</dias_validos>
+            <horas_validas>08:00 - 20:00</horas_validas>
+        </horario>
+        <horario id_horari="2">
+            <dias_validos>Lunes a Viernes</dias_validos>
+            <horas_validas>14:00 - 20:00</horas_validas>
+        </horario>
+        <horario id_horari="3">
+            <dias_validos>Lunes a Viernes</dias_validos>
+            <horas_validas>09:00 - 11:00</horas_validas>
+        </horario>
+        <horario id_horari="4">
+            <dias_validos>Sábados y Domingos</dias_validos>
+            <horas_validas>10:00 - 18:00</horas_validas>
+        </horario>
+        <horario id_horari="5">
+            <dias_validos>Lunes a Viernes</dias_validos>
+            <horas_validas>07:00 - 09:00</horas_validas>
+        </horario>
+    </horarios>
+</gimnasio>

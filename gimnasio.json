@@ -1,0 +1,239 @@
+{
+    "gimnasio": {
+        "usuarios": {
+            "usuario": [
+                {
+                    "@id_usuari": "1",
+                    "DNI": "12345678A",
+                    "nombre": "Juan",
+                    "cognoms": "Pérez García",
+                    "telefono": "612345678",
+                    "email": "juanperez@email.com",
+                    "direccion": "Calle Falsa 123",
+                    "codigo_postal": "08001",
+                    "id_abonament": "1"
+                },
+                {
+                    "@id_usuari": "2",
+                    "DNI": "23456789B",
+                    "nombre": "Ana",
+                    "cognoms": "Rodríguez López",
+                    "telefono": "623456789",
+                    "email": "anarodriguez@email.com",
+                    "direccion": "Avenida Primavera 45",
+                    "codigo_postal": "08002",
+                    "id_abonament": "2"
+                },
+                {
+                    "@id_usuari": "3",
+                    "DNI": "34567890C",
+                    "nombre": "Pedro",
+                    "cognoms": "Gómez Martín",
+                    "telefono": "634567890",
+                    "email": "pedrogomez@email.com",
+                    "direccion": "Calle del Sol 789",
+                    "codigo_postal": "08003",
+                    "id_abonament": "3"
+                },
+                {
+                    "@id_usuari": "4",
+                    "DNI": "45678901D",
+                    "nombre": "Lucía",
+                    "cognoms": "Martínez Fernández",
+                    "telefono": "645678901",
+                    "email": "luciamartinez@email.com",
+                    "direccion": "Calle Luna 321",
+                    "codigo_postal": "08004",
+                    "id_abonament": "4"
+                },
+                {
+                    "@id_usuari": "5",
+                    "DNI": "56789012E",
+                    "nombre": "Mario",
+                    "cognoms": "Hernández Pérez",
+                    "telefono": "656789012",
+                    "email": "mariohernandez@email.com",
+                    "direccion": "Calle Estrella 456",
+                    "codigo_postal": "08005",
+                    "id_abonament": "5"
+                }
+            ]
+        },
+        "proveedores": {
+            "proveedor": [
+                {
+                    "@id_proveïdor": "1",
+                    "NIF": "A12345678",
+                    "nombre": "FitPro S.A.",
+                    "telefono": "677123456",
+                    "email": "contacto@fitpro.com",
+                    "direccion": "Calle del Deporte 1",
+                    "ids_productos": "1,2,3",
+                    "persona_contacte": "Juan López"
+                },
+                {
+                    "@id_proveïdor": "2",
+                    "NIF": "B23456789",
+                    "nombre": "SportEquip",
+                    "telefono": "688234567",
+                    "email": "info@sportequip.com",
+                    "direccion": "Avenida Fitness 23",
+                    "ids_productos": "4,5,6",
+                    "persona_contacte": "Ana Sánchez"
+                },
+                {
+                    "@id_proveïdor": "3",
+                    "NIF": "C34567890",
+                    "nombre": "HealthyGear",
+                    "telefono": "699345678",
+                    "email": "ventas@healthygear.com",
+                    "direccion": "Calle Bienestar 11",
+                    "ids_productos": "7,8,9",
+                    "persona_contacte": "Pablo González"
+                },
+                {
+                    "@id_proveïdor": "4",
+                    "NIF": "D45678901",
+                    "nombre": "PowerFit",
+                    "telefono": "710456789",
+                    "email": "atencion@powerfit.com",
+                    "direccion": "Calle Fuerza 77",
+                    "ids_productos": "10,1,4",
+                    "persona_contacte": "Carla Rodríguez"
+                },
+                {
+                    "@id_proveïdor": "5",
+                    "NIF": "E56789012",
+                    "nombre": "ProFit",
+                    "telefono": "721567890",
+                    "email": "contacto@profit.com",
+                    "direccion": "Avenida Fitness 44",
+                    "ids_productos": "2,6,7",
+                    "persona_contacte": "Tomás Pérez"
+                }
+            ]
+        },
+        "productos": {
+            "producto": [
+                {
+                    "@id_producte": "1",
+                    "nombre": "Máquina de correr",
+                    "fungible": "false",
+                    "cantidad_actual": "10"
+                },
+                {
+                    "@id_producte": "2",
+                    "nombre": "Pesa 10kg",
+                    "fungible": "true",
+                    "cantidad_actual": "50"
+                },
+                {
+                    "@id_producte": "3",
+                    "nombre": "Banco de pesas",
+                    "fungible": "false",
+                    "cantidad_actual": "5"
+                },
+                {
+                    "@id_producte": "4",
+                    "nombre": "Mancuernas",
+                    "fungible": "true",
+                    "cantidad_actual": "20"
+                },
+                {
+                    "@id_producte": "5",
+                    "nombre": "Estera de yoga",
+                    "fungible": "true",
+                    "cantidad_actual": "15"
+                },
+                {
+                    "@id_producte": "6",
+                    "nombre": "Pelota medicinal",
+                    "fungible": "true",
+                    "cantidad_actual": "25"
+                },
+                {
+                    "@id_producte": "7",
+                    "nombre": "Ropa deportiva",
+                    "fungible": "true",
+                    "cantidad_actual": "30"
+                },
+                {
+                    "@id_producte": "8",
+                    "nombre": "Elíptica",
+                    "fungible": "false",
+                    "cantidad_actual": "3"
+                },
+                {
+                    "@id_producte": "9",
+                    "nombre": "Bicicleta estática",
+                    "fungible": "false",
+                    "cantidad_actual": "7"
+                },
+                {
+                    "@id_producte": "10",
+                    "nombre": "Suplemento proteico",
+                    "fungible": "true",
+                    "cantidad_actual": "100"
+                }
+            ]
+        },
+        "abonamientos": {
+            "abonament": [
+                {
+                    "@id_abonament": "1",
+                    "id_horari": "1",
+                    "descripcion": "Acceso ilimitado al gimnasio"
+                },
+                {
+                    "@id_abonament": "2",
+                    "id_horari": "2",
+                    "descripcion": "Acceso limitado a horarios de tarde"
+                },
+                {
+                    "@id_abonament": "3",
+                    "id_horari": "3",
+                    "descripcion": "Acceso solo a clases de yoga"
+                },
+                {
+                    "@id_abonament": "4",
+                    "id_horari": "4",
+                    "descripcion": "Acceso al gimnasio solo fines de semana"
+                },
+                {
+                    "@id_abonament": "5",
+                    "id_horari": "5",
+                    "descripcion": "Acceso a clases de entrenamiento personalizado"
+                }
+            ]
+        },
+        "horarios": {
+            "horario": [
+                {
+                    "@id_horari": "1",
+                    "dias_validos": "Lunes a Viernes",
+                    "horas_validas": "08:00 - 20:00"
+                },
+                {
+                    "@id_horari": "2",
+                    "dias_validos": "Lunes a Viernes",
+                    "horas_validas": "14:00 - 20:00"
+                },
+                {
+                    "@id_horari": "3",
+                    "dias_validos": "Lunes a Viernes",
+                    "horas_validas": "09:00 - 11:00"
+                },
+                {
+                    "@id_horari": "4",
+                    "dias_validos": "Sábados y Domingos",
+                    "horas_validas": "10:00 - 18:00"
+                },
+                {
+                    "@id_horari": "5",
+                    "dias_validos": "Lunes a Viernes",
+                    "horas_validas": "07:00 - 09:00"
+                }
+            ]
+        }
+    }
+}
