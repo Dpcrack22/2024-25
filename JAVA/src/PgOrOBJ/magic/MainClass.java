@@ -1,6 +1,7 @@
 package PgOrOBJ.magic;
 
 import java.lang.Math;
+import java.util.*;
 import java.util.Arrays;
 
 public class MainClass {

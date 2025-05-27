@@ -1,9 +1,10 @@
-package magic;
+package PgOrOBJ.magic;
 
 import java.lang.Math;
+import java.util.*;
 import java.util.Arrays;
 
-public class MainClass {
+public class MainClass2 {
 
 public static void main(String[] args) {
 		
