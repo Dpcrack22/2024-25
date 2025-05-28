@@ -117,11 +117,47 @@ for dni in lista_dnis:
 print(datos)
 
 
-
+datos = ""
 lista_dnis = list(clientes.keys())
 for pasada in range(len(lista_dnis)):
     for i in range(len(lista_dnis)-1-pasada):
-        if lista_dnis[i]["nombre"] > lista_dnis[i+1]["nombre"]:
+        if clientes[lista_dnis[i]]["nombre"] > clientes[lista_dnis[i+1]]["nombre"]:
+            aux = lista_dnis[i+1]
+            lista_dnis[i+1] = lista_dnis[i]
+            lista_dnis[i] = aux
+for dni in lista_dnis:
+    datos += str(dni).ljust(15) + str(clientes[dni]["nombre"]).ljust(20) +str(clientes[dni]["tfn"]).rjust(15)
+    total_compras = 0
+    for i in range(len(clientes[dni]["compras"])):
+        total_compras = clientes[dni]["compras"][i]
+        if i == 0:
+            datos += str(clientes[dni]["compras"][i]).rjust(15) +"\n"
+        else:
+            datos += " ".ljust(50) + str(clientes[dni]["compras"][i]).rjust(15) +"\n"
+    
+    datos += "".center(70,"-") +"\n"
+    datos += "Total Compras".ljust(50) + str(total_compras).rjust(12)+"\n"
+    datos += "".center(70,"-") +"\n"
+
+
+print(datos)
+
+
+datos = ""
+lista_dnis = list(clientes.keys())
+for pasada in range(len(lista_dnis)):
+    for i in range(len(lista_dnis)-1-pasada):
+
+        total_compras_i = 0
+        total_compras_i_1 = 0
+        for compra in clientes[lista_dnis[i]]["compras"]:
+            total_compras_i += compra
+
+        for compra in clientes[lista_dnis[i+1]]["compras"]:
+            total_compras_i_1 += compra
+
+
+        if total_compras_i > total_compras_i_1:
             aux = lista_dnis[i+1]
             lista_dnis[i+1] = lista_dnis[i]
             lista_dnis[i] = aux
