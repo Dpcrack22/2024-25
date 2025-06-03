@@ -24,6 +24,7 @@ while condicion:
             grupo = discos[2]
             #print(discos)
             print(disco.ljust(30), año.rjust(10), grupo.rjust(20))
+        input("Presione Enter para continuar...")
 
     elif opcion == "2":
         nuevoDisco = True
@@ -67,38 +68,42 @@ while condicion:
 
     elif opcion == "3":
         print(menu03)
-        opcionBusqueda = input("Seleccione una opción: ")
-        if opcionBusqueda == "1":
-            discoBuscado = input("Introduce el nombre del disco a buscar: ")
-            encontrado = False
-            for registro in discografia.split("-"):
-                if discoBuscado.lower() in registro.lower():
-                    encontrado = True
-                    print(registro)
-            if not encontrado:
-                print("Disco no encontrado.")
+        while True:
+            opcionBusqueda = input("Seleccione una opción: ")
+            if opcionBusqueda == "1":
+                discoBuscado = input("Introduce el nombre del disco a buscar: ")
+                encontrado = False
+                for registro in discografia.split("-"):
+                    if discoBuscado.lower() in registro.lower():
+                        encontrado = True
+                        print(registro)
+                if not encontrado:
+                    print("Disco no encontrado.")
 
-        elif opcionBusqueda == "2":
-            añoBuscado = input("Introduce el año a buscar: ")
-            encontrado = False
-            for registro in discografia.split("-"):
-                if añoBuscado in registro:
-                    encontrado = True
-                    print(registro)
-            if not encontrado:
-                print("Año no encontrado.")
+            elif opcionBusqueda == "2":
+                añoBuscado = input("Introduce el año a buscar: ")
+                encontrado = False
+                for registro in discografia.split("-"):
+                    if añoBuscado in registro:
+                        encontrado = True
+                        print(registro)
+                if not encontrado:
+                    print("Año no encontrado.")
 
-        elif opcionBusqueda == "3":
-            grupoBuscado = input("Introduce el nombre del grupo a buscar: ")
-            encontrado = False
-            for registro in discografia.split("-"):
-                if grupoBuscado.lower() in registro.lower():
-                    encontrado = True
-                    print(registro)
-            if not encontrado:
-                print("Grupo no encontrado.")
-
-        elif opcionBusqueda == "4":
-            continue
+            elif opcionBusqueda == "3":
+                grupoBuscado = input("Introduce el nombre del grupo a buscar: ")
+                encontrado = False
+                for registro in discografia.split("-"):
+                    if grupoBuscado.lower() in registro.lower():
+                        encontrado = True
+                        print(registro)
+                if not encontrado:
+                    print("Grupo no encontrado.")
+                    
+            elif opcionBusqueda == "4":
+                break
+    elif opcion == "5":
+        print("Saliendo del programa...")
+        condicion = False
 
 

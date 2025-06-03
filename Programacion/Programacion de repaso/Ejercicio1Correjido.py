@@ -1,7 +1,7 @@
 discografia = "Abbey Road*1969*The Beatles-The Dark Side of the Moon*1973*Pink Floyd-Born to Run*1975*Bruce Springsteen-Hotel California*1976*Eagles-Rumours*1977*Fleetwood Mac-Back in Black*1980*AC/DC-Thriller*1982*Michael Jackson-The Joshua Tree*1987*U2-Nevermind*1991*Nirvana-OK Computer*1997*Radiohead-"
 
 total_discos = discografia.count("-")
-print(total_discos)
+#print(total_discos)
 inicio = 0
 final = 0
 

@@ -11,7 +11,7 @@ while True:
         S = float(S)
         if P == 0 and Q == 0 and S == 0:
             print("Por favor, introduce al menos un valor distinto de cero.")
-        elif S < (P**2 + Q**2)**0.5:
+        elif :
             print("La potencia aparente debe ser mayor que la potencia activa y o la potencia reactiva.")
         else:
             if S == 0:
